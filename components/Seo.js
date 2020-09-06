@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { getSiteMetaData } from 'utils/helpers';
 
-export default function SEO({ title, description = '', type = '' }) {
+export default function SEO({ title, description = '', type = '', image = '' }) {
 	const siteMetadata = getSiteMetaData();
 
 	const metaDescription = description || siteMetadata.description;
@@ -13,7 +13,7 @@ export default function SEO({ title, description = '', type = '' }) {
 			</title>
 			<meta name='description' content={metaDescription} />
 			<meta name='og:title' property='og:title' content={title} />
-			<meta name='og:image' property='og:image' content='https://bugged.dev/profile.jpg' />
+			<meta name='og:image' property='og:image' content={image || 'https://bugged.dev/profile.jpg'} />
 			<meta name='og:description' property='og:description' content={metaDescription} />
 			<meta property='og:locale' content='en_US' />
 
