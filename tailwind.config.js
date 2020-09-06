@@ -27,7 +27,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "neon-orange": "#f92300",
+        "red": "#c0392b",
       },
       fontSize: {
         "7xl": "4.5rem",
@@ -45,16 +45,16 @@ module.exports = {
         css: {
           color: theme("colors.gray.900"),
           blockquote: {
-            borderLeftColor: theme("colors.gray.700"),
+            borderLeftColor: theme("colors.red"),
           },
           "ol > li::before": {
-            color: theme("colors.gray.700"),
+            color: theme("colors.red"),
           },
           "ul > li::before": {
-            backgroundColor: theme("colors.gray.700"),
+            backgroundColor: theme("colors.red"),
           },
           a: {
-            color: "#f92300",
+            color: theme('colors.red'),
           },
         },
       },
