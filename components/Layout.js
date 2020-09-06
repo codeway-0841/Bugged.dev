@@ -9,7 +9,7 @@ export default function Layout({ children, primary }) {
 		primary || isRoot ? (
 			<h1 className='mb-8'>
 				<Link href='/'>
-					<a className='font-black leading-none text-black no-underline text-7xl font-display'>
+					<a className='font-black leading-none text-black no-underline text-6xl font-display'>
 						Bugged.dev🐞
 					</a>
 				</Link>
