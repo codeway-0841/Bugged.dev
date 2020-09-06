@@ -33,7 +33,7 @@ module.exports = {
 			},
 			fontSize : {
 				'7xl' : '4.2rem',
-				'6xl' : '3.4rem'
+				'6xl' : '3.7rem'
 			},
 			spacing  : {
 				14 : '3.375rem'
