@@ -29,7 +29,7 @@ const MarkdownImage = ({ alt, src }) => (
 export default function Post({ post, frontmatter, nextPost, previousPost }) {
 	return (
 		<Layout>
-			<SEO title={frontmatter.title} description={frontmatter.description || post.excerpt} />
+			<SEO type='article' title={frontmatter.title} description={frontmatter.description || post.excerpt} />
 
 			<article>
 				<header className='mb-8'>

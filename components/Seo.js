@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { getSiteMetaData } from 'utils/helpers';
 
-export default function SEO({ title, description = '' }) {
+export default function SEO({ title, description = '', type = '' }) {
 	const siteMetadata = getSiteMetaData();
 
 	const metaDescription = description || siteMetadata.description;
@@ -12,10 +12,12 @@ export default function SEO({ title, description = '' }) {
 				{title} | {siteMetadata.title}
 			</title>
 			<meta name='description' content={metaDescription} />
-			<meta property='og:type' content='website' />
 			<meta name='og:title' property='og:title' content={title} />
-			<meta name='og:image' property='og:image' content='/profile.jpg' />
+			<meta name='og:image' property='og:image' content={'https://bugged.dev/profile.jpg'} />
 			<meta name='og:description' property='og:description' content={metaDescription} />
+			<meta property='og:locale' content='en_US' />
+
+			<meta name='og:type' property='og:type' content={type || 'website'} />
 			<meta name='twitter:card' content='summary' />
 			<meta name='twitter:title' content={title} />
 			<meta name='twitter:description' content={metaDescription} />
