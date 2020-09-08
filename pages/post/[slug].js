@@ -1,15 +1,14 @@
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
-
+import ReactMarkdown from 'react-markdown/with-html';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import { getPostBySlug, getPostsSlugs } from 'utils/posts';
 import SEO from 'components/Seo';
-
-const ReactMarkdown = dynamic(() => import('react-markdown/with-html'));
-const SyntaxHighlighter = dynamic(() => import('react-syntax-highlighter/dist/cjs/prism'));
 const Layout = dynamic(() => import('components/Layout'));
 const Image = dynamic(() => import('components/Image'));
 const Bio = dynamic(() => import('components/Bio'));
+
 const CodeBlock = ({ language, value }) => {
 	return (
 		<SyntaxHighlighter language={language} style={atomDark}>
