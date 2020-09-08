@@ -24,6 +24,7 @@ export default function SEO({ title, description = '', type = '', image = '' }) 
 			<meta name='keywords' content='ReactJS, React, Javascript, Typescript, JS, TS, Front-end, NodeJS, NextJS' />
 			<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 			<meta name='robots' content='index, follow' />
+			<meta name='language' content='EN' />
 
 			<meta name='twitter:creator' content={siteMetadata.social.twitter} />
 			<link rel='icon' type='image/png' href='/favicon.ico' />
