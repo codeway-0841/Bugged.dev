@@ -7,7 +7,7 @@ import { getPostBySlug, getPostsSlugs } from 'utils/posts';
 import SEO from 'components/Seo';
 const Layout = dynamic(() => import('components/Layout'), { loading: '🐞' });
 const Image = dynamic(() => import('components/Image'), { loading: '🐞' });
-const Bio = dynamic((() => import('components/Bio'): { loading: '🐞' }));
+const Bio = dynamic((() => import('components/Bio'), { loading: '🐞' }));
 
 const CodeBlock = ({ language, value }) => {
 	return (
