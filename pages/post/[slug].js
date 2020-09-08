@@ -8,7 +8,7 @@ import Image from 'components/Image';
 import SEO from 'components/Seo';
 import { getPostBySlug, getPostsSlugs } from 'utils/posts';
 import Bio from 'components/Bio';
-const ReactMarkdown = dynamic(() => import('react-markdown/with-html'));
+const ReactMarkdown = dynamic(() => import('react-markdown/with-html'), { loading: '🐞' });
 const SyntaxHighlighter = dynamic(() => import('react-syntax-highlighter/dist/cjs/prism'));
 const CodeBlock = ({ language, value }) => {
 	return (
