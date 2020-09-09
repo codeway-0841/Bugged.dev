@@ -1,8 +1,6 @@
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
-// import ReactMarkdown from 'react-markdown/with-html';
 import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
-
 import Layout from 'components/Layout';
 import Image from 'components/Image';
 import SEO from 'components/Seo';
