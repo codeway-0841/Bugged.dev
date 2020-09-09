@@ -31,7 +31,6 @@ import { bye, hi } from './say.js';
 // dynamic import  
 let { bye, hi } = await import('./say.js');
 ```
-> Dynamic import is a just syntax, not anything else.
 
 
 ## Next
