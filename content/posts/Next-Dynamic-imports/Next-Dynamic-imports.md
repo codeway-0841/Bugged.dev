@@ -7,7 +7,7 @@ date: 2020-09-09
 
   
 
-I assume you know the regular **import** syntax, It's cool, but you know, it's too static and strict, if you don't know about it, read [this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import). We're gonna take a look at something like it in Next.js. 
+I assume you know the regular **import** syntax, It's cool, but you know, it's too static and strict, if you don't know about it, read [this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) to take the idea. We're gonna take a look at something like it in Next.js. 
 
 ## Intro 👋
 
