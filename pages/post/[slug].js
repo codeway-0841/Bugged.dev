@@ -10,7 +10,7 @@ const ReactMarkdown = dynamic(() => import('react-markdown/with-html'), { loadin
 const SyntaxHighlighter = dynamic(() => import('react-syntax-highlighter/dist/cjs/prism-async-light'));
 const CodeBlock = ({ language, value }) => {
 	return (
-		<SyntaxHighlighter language={language} style={dracula} customStyle={{ fontSize: '1.05rem' }}>
+		<SyntaxHighlighter language={language} style={dracula} customStyle={{ fontSize: '1.1rem' }}>
 			{value}
 		</SyntaxHighlighter>
 	);
