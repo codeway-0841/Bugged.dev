@@ -7,7 +7,7 @@ date: 2020-09-09
 
   
 
-I assume you know the regular **import** syntax, It's cool, but you know, it's too static and strictly, I don't mean that it's a bad idea, Not at all, That is its idea and it's a perfect idea. But we need something more dynamic and We can import it when we need it.
+I assume you know the regular **import** syntax, It's cool, but you know, it's too static and strict, if you don't know about it, read [this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import). We're gonna take a look at something like it in Next.js. 
 
 ## Intro 👋
 
@@ -73,7 +73,7 @@ If you have huge image or something else too, you can handle it using just the *
     />
 ```
 ## Note 
-Don't be Obsessive like me, Sometimes you don't have a TTFB problem or huge components, So you don't need **dynamic import**, Imagine you are the browser, and someone thinks that you are too weak for handling 15 lines components, You'll kill him, right?
+Don't be Obsessive like me, Sometimes you don't have a TTFB problem or huge components, So you don't need **dynamic import**, Imagine you are the browser, and someone thinks that you are too weak for handling 15 lines components, What you're going to do?
 It's like using pure components or memo when you don't have any problem with React re-rendering.
 
 I hope you enjoyed this small article and You know we don't have likes or comments here, but you can share it. If you wanted to tell me something, tell me in twitter or mention me anywhere else, You can create an issue in GitHub too. 🐞
