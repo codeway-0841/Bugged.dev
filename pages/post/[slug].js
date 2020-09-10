@@ -1,16 +1,16 @@
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
-import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import Layout from 'components/Layout';
 import Image from 'components/Image';
 import SEO from 'components/Seo';
 import { getPostBySlug, getPostsSlugs } from 'utils/posts';
 import Bio from 'components/Bio';
+import dracula from 'react-syntax-highlighter/dist/cjs/styles/prism/dracula';
 const ReactMarkdown = dynamic(() => import('react-markdown/with-html'), { loading: () => '🐞...' });
-const SyntaxHighlighter = dynamic(() => import('react-syntax-highlighter/dist/cjs/prism'));
+const SyntaxHighlighter = dynamic(() => import('react-syntax-highlighter/dist/cjs/prism-async-light'));
 const CodeBlock = ({ language, value }) => {
 	return (
-		<SyntaxHighlighter language={language} style={atomDark}>
+		<SyntaxHighlighter language={language} style={dracula} customStyle={{ fontSize: '1.05rem' }}>
 			{value}
 		</SyntaxHighlighter>
 	);
