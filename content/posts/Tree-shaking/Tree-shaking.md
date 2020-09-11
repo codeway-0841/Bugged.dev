@@ -16,7 +16,7 @@ Tree shaking is a simple concept to reduce the size of production build to have 
 ## Why? 🤔
 It allows the bundler to modify some parts of the production code to remove the unused parts. Also, it allows you to use just the needed parts.
 
-Imagine We have a file ```meet.js```: 
+Imagine We have a file **meet.js**: 
 ```js
 // meet.js
 function hi() {
