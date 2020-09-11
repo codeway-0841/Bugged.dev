@@ -20,6 +20,7 @@ const MarkdownImage = ({ alt, src }) => {
 	const isLink = src.startsWith('http');
 	return (
 		<Image
+			post={true}
 			alt={alt}
 			src={isLink ? src : require(`../../content/assets/${src}`)}
 			previewSrc={isLink ? src + '?lqip' : require(`../../content/assets/${src}?lqip`)}
