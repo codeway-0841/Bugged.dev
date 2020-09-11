@@ -64,11 +64,11 @@ In React we used React.Lazy syntax but in Next.js, it's a little bit different a
 * **loading**: Show something when the component is in loading situation.
 
 ### Others
-If you have huge image or something else too, you can handle it using just the **import()**, We don't need *dynamic*, for example:
+If you have huge image or something else too, you can handle it using just the **import()** or **require()**, We don't need *dynamic*, for example:
 
 ```jsx
 <Image
-        src={import(`../path/to/image.png`)}
+        src={require(`../path/to/image.png`)}
         className='w-full'
     />
 ```
