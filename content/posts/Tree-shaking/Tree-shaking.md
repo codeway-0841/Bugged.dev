@@ -16,7 +16,7 @@ Tree shaking is a simple concept to reduce the size of production build to have 
 ## Why? 🤔
 It allows the bundler to modify some parts of the production code to remove the unused parts. Also, it allows you to use just the needed parts.
 
-Imagine We have a file **meet.js**: 
+Imagine we have a file **meet.js**: 
 ```js
 // meet.js
 function hi() {
@@ -34,13 +34,13 @@ import { hi } from './meet.js'
 
 hi();
 ```
-Here is the point, maybe you thought We just imported the **hi**, but not, We imported all of the **meet.js**, that means We have **bye** in the production, too. So the production build has unused code, It's not a good thing.
+Here is the point, maybe you thought we just imported the **hi**, but not, We imported all of the **meet.js**, that means we have **bye** in the production, too. So the production build has unused code, It's not a good thing.
 
-In some packages, We do this too, We import the needed parts, but in the production, We have too unused code and We don't have any idea about it. 
+In some packages, we do this too, we import the needed parts, but in the production, we have too unused code and we don't have any idea about it. 
 
 ## How? 😬
 
-Here We can use Tree shaking, but if the package that We're using implemented the Tree shaking feature.
+Here we can use Tree shaking, but if the package that we're using implemented the Tree shaking feature.
 ```js
 import { chunk } from 'lodash-es/array/chunk'
 ```
@@ -58,6 +58,6 @@ import { chunk } from 'lodash-es/array/chunk' // With Tree shaking
 ```
 
 ## Note
-I think you should use or implement this feature because reducing the build size is so important and the users love the speed. In the previous [article](/post/Next-Dynamic-imports), I said to use the Dynamic imports feature When you have TTFB issues, and if you use it always, It will affect the TTFB and slows it down sometimes, But Tree shaking is a great feature, So use it always when You can.
+I think you should use or implement this feature because reducing the build size is so important and the users love the speed. In the previous [article](/post/Next-Dynamic-imports), I said to use the Dynamic imports feature When you have TTFB issues, and if you use it always, It will affect the TTFB and slows it down sometimes, But Tree shaking is a great feature, So use it always when you can.
 
-I hope you enjoyed this small article and You know We don't have likes or comments here, but you can share it. If you wanted to tell me something, tell me in twitter or mention me anywhere else, You can create an issue in GitHub too. 🐞
+I hope you enjoyed this small article and You know we don't have likes or comments here, but you can share it. If you wanted to tell me something, tell me in twitter or mention me anywhere else, You can create an issue in GitHub too. 🐞
