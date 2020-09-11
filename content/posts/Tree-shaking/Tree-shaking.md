@@ -30,7 +30,7 @@ export { bye, hi }
 ```
 Now import it in another file: 
 ```js
-import { hi } from './meet.js'
+import { hi } from './meet'
 
 hi();
 ```
