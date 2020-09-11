@@ -1,4 +1,3 @@
-import { Fragment } from 'react';
 import 'lazysizes';
 
 export default function Image({ alt, src, previewSrc, className, post }) {
