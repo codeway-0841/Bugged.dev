@@ -5,7 +5,7 @@ export default function SEO({ title, description = '', type = '', image = '' }) 
 	const siteMetadata = getSiteMetaData();
 
 	const metaDescription = description || siteMetadata.description;
-
+	const isLink = image.startsWith('http');
 	return (
 		<Head>
 			<title>
@@ -13,7 +13,13 @@ export default function SEO({ title, description = '', type = '', image = '' }) 
 			</title>
 			<meta name='description' content={metaDescription} />
 			<meta name='og:title' property='og:title' content={title} />
-			<meta name='og:image' property='og:image' content={image || 'https://bugged.dev/profile.jpg'} />
+			<meta
+				name='og:image'
+				property='og:image'
+				content={
+					image ? isLink ? image : require(`../content/assets/${image}`) : 'https://bugged.dev/profile.jpg'
+				}
+			/>
 			<meta name='og:description' property='og:description' content={metaDescription} />
 			<meta property='og:locale' content='en_US' />
 

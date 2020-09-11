@@ -19,6 +19,14 @@ p {
     @apply font-light;
 }
 
+p span.block img {
+    margin-bottom: .3rem!important;
+}
+
+p span.block span {
+    margin-top: 1rem!important;
+}
+
 
 /* Styles for lazy loaded images */
 

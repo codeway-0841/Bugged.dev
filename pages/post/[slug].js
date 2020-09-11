@@ -10,25 +10,33 @@ const ReactMarkdown = dynamic(() => import('react-markdown/with-html'), { loadin
 const SyntaxHighlighter = dynamic(() => import('react-syntax-highlighter/dist/cjs/prism-async-light'));
 const CodeBlock = ({ language, value }) => {
 	return (
-		<SyntaxHighlighter language={language} style={dracula} customStyle={{ fontSize: '1.1rem' }}>
+		<SyntaxHighlighter language={language} style={dracula} customStyle={{ fontSize: '1rem' }}>
 			{value}
 		</SyntaxHighlighter>
 	);
 };
 
-const MarkdownImage = ({ alt, src }) => (
-	<Image
-		alt={alt}
-		src={import(`../../content/assets/${src}`)}
-		previewSrc={import(`../../content/assets/${src}?lqip`)}
-		className='w-full'
-	/>
-);
+const MarkdownImage = ({ alt, src }) => {
+	const isLink = src.startsWith('http');
+	return (
+		<Image
+			alt={alt}
+			src={isLink ? src : require(`../../content/assets/${src}`)}
+			previewSrc={isLink ? src + '?lqip' : require(`../../content/assets/${src}?lqip`)}
+			className='w-full'
+		/>
+	);
+};
 
 export default function Post({ post, frontmatter, nextPost, previousPost }) {
 	return (
 		<Layout>
-			<SEO type='article' title={frontmatter.title} description={frontmatter.description || post.excerpt} />
+			<SEO
+				image={frontmatter.img || ''}
+				type='article'
+				title={frontmatter.title}
+				description={frontmatter.description || post.excerpt}
+			/>
 
 			<article>
 				<header className='mb-8'>
