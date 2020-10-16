@@ -4,39 +4,85 @@
 html,
 body {
     overflow-x: hidden;
-}
 
+}
+* {
+    scrollbar-color: dark;
+}
+*::selection {
+	@apply bg-bg-red;
+}
+.dark-mode {
+	@apply bg-bg-black;
+}
 a {
-    @apply text-red;
+	@apply text-red;
+}
+.dark-mode a {
+	@apply text-white;
+	@apply bg-bg-red;
 }
 
 a:hover {
-    @apply underline;
+	@apply underline;
 }
-
+.dark-mode button {
+	@apply text-white;
+}
 span,
 p {
-    @apply font-light;
+	@apply font-light;
+}
+.dark-mode p,
+.dark-mode span,
+.dark-mode footer {
+	@apply text-gray-400;
 }
 
 p span.block img {
-    margin-bottom: .3rem!important;
+	margin-bottom: .3rem !important;
 }
 
 p span.block span {
-    margin-top: 1rem!important;
+	margin-top: 1rem !important;
+}
+.dark-mode p span.block span {
+	@apply bg-bg-red;
 }
 
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6 {
+	@apply text-gray-200;
+}
+.dark-mode article h1,
+.dark-mode article h2,
+.dark-mode article h3,
+.dark-mode article h4,
+.dark-mode article h5,
+.dark-mode article h6 {
+	@apply text-gray-200;
+}
 
-/* Styles for lazy loaded images */
-
+.dark-mode p strong,
+.dark-mode p i,
+.dark-mode ul strong,
+.dark-mode p a {
+	@apply text-gray-200;
+}
+.dark-mode ul {
+	@apply text-gray-400;
+}
 .blur-up {
-    -webkit-filter: blur(5px);
-    filter: blur(5px);
-    transition: filter 500ms ease-in, -webkit-filter 500ms ease-in;
+	-webkit-filter: blur(5px);
+	filter: blur(5px);
+	transition: filter 500ms ease-in, -webkit-filter 500ms ease-in;
 }
 
 .blur-up.lazyloaded {
-    -webkit-filter: blur(0);
-    filter: blur(0);
+	-webkit-filter: blur(0);
+	filter: blur(0);
 }

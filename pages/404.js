@@ -1,11 +1,14 @@
-import React, { Fragment } from 'react';
-import Link from 'next/link';
+import React from 'react';
 import Layout from 'components/Layout';
 
 const custom404 = () => {
 	return (
 		<Layout primary>
-			<h3 className='m-4'>Sorry🐞, I didn't found what You need.</h3>
+			<h3 className="m-4">
+				Sorry<span role="img" aria-label="emoji">
+					🐞
+				</span>, I didn't found what You need.
+			</h3>
 		</Layout>
 	);
 };

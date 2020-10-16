@@ -7,7 +7,8 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "analyze": "ANALYZE=true yarn run build"
+        "analyze": "ANALYZE=true yarn run build",
+        "export": "next export"
     },
     "dependencies": {
         "@next/bundle-analyzer": "^9.5.3",
@@ -16,21 +17,25 @@
         "imagemin-optipng": "^8.0.0",
         "lazysizes": "^5.2.2",
         "lqip-loader": "^2.2.0",
-        "next": "9.5.2",
+        "next": "^9.5.5",
         "next-compose-plugins": "^2.2.0",
         "next-optimized-images": "^2.6.2",
         "postcss-preset-env": "^6.7.0",
+        "postcss-selector-parser": "^6.0.4",
         "react": "16.13.1",
         "react-dom": "16.13.1",
         "react-markdown": "^4.3.1",
         "react-syntax-highlighter": "^13.5.1",
+        "use-persisted-state": "^0.3.0",
         "typeface-merriweather": "^0.0.72",
         "typeface-open-sans": "^0.0.75"
+    
     },
     "devDependencies": {
         "@tailwindcss/typography": "^0.2.0",
         "gray-matter": "^4.0.2",
-        "tailwindcss": "^1.7.6"
+        "tailwindcss": "^1.7.6",
+        "tailwindcss-theme-variants": "^1.6.1"
     },
     "license": "MIT",
     "repository": {
