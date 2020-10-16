@@ -6,14 +6,14 @@ const useDarkMode = () => {
 	const [ darkMode, setDarkMode ] = useState(false);
 	useEffect(
 		() => {
-			global.window.__onDarkModeChange = setDarkMode;
+			window.__onDarkModeChange = setDarkMode;
 		},
 		[ setDarkMode ]
 	);
 
 	useEffect(
 		() => {
-			global.window.__setDarkMode(darkMode);
+			window.__setDarkMode(darkMode);
 		},
 		[ darkMode ]
 	);

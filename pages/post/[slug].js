@@ -6,6 +6,7 @@ import Image from 'components/Image';
 import SEO from 'components/Seo';
 import { getPostBySlug, getPostsSlugs } from 'utils/posts';
 import Bio from 'components/Bio';
+import Progress from 'components/Progress';
 import dracula from 'react-syntax-highlighter/dist/cjs/styles/prism/dracula';
 const ReactMarkdown = dynamic(() => import('react-markdown/with-html'), { loading: () => '🐞Please wait...' });
 const SyntaxHighlighter = dynamic(() => import('react-syntax-highlighter/dist/cjs/prism-async-light'));
@@ -39,6 +40,7 @@ export default function Post({ post, frontmatter, nextPost, previousPost }) {
 				title={frontmatter.title}
 				description={frontmatter.description || post.excerpt}
 			/>
+			<Progress />
 
 			<article>
 				<header className="mb-8">
