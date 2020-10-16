@@ -18,9 +18,9 @@ export default function Layout({ children, primary }) {
 	};
 
 	return (
-		<div className="max-w-screen-sm px-4 py-12 mx-auto antialiased font-body items-end">
+		<div className="max-w-screen-sm px-4 py-12 mx-auto antialiased font-body">
 			<header>
-				<div className={`flex justify-between align-bottom ${primary || isRoot ? 'mb-8' : 'mb-2'}`}>
+				<div className={`flex justify-between align-bottom items-end ${primary || isRoot ? 'mb-8' : 'mb-2'}`}>
 					{primary || isRoot ? (
 						<h1>
 							<Link href="/">
