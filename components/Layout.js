@@ -1,13 +1,16 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 import useDarkMode from 'hooks/useDarkMode';
+import Loading from './Loading';
 
 export default function Layout({ children, primary }) {
+	const [ loading, setLoading ] = useState(false);
 	const [ darkMode, setDarkMode ] = useDarkMode();
-	const { pathname } = useRouter();
+	const { pathname, events } = useRouter();
 	const isRoot = pathname === '/';
 
 	const handleDarkModeChange = () => {
@@ -16,9 +19,20 @@ export default function Layout({ children, primary }) {
 		}
 		setDarkMode(true);
 	};
+	useEffect(() => {
+		events.on('routeChangeStart', () => setLoading(true));
+		events.on('routeChangeComplete', () => setLoading(false));
+
+		return () => {
+			events.off('routeChangeStart', () => setLoading(true));
+			events.off('routeChangeComplete', () => setLoading(false));
+		};
+	}, []);
 
 	return (
 		<div className="max-w-screen-sm px-4 py-12 mx-auto antialiased font-body">
+			{loading ? <Loading /> : null}
+
 			<header>
 				<div className={`flex justify-between align-bottom items-end ${primary || isRoot ? 'mb-8' : 'mb-2'}`}>
 					{primary || isRoot ? (
