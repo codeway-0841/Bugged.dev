@@ -16,7 +16,12 @@ export default class MyDocument extends Document {
 						data-ackee-domain-id="7134e287-4738-4ca8-89c7-069ef8abf7f4"
 					/>
 					<script async src="https://cdn.splitbee.io/sb.js" />
-					<script dangerouslySetInnerHTML={{ __html: `window.__onDarkModeChange = function () {};` }} />
+					<script
+						dangerouslySetInnerHTML={{
+							__html: `window.__onDarkModeChange = function () {};
+										window.__setDarkMode = function () {}`
+						}}
+					/>
 				</Head>
 
 				<body>
