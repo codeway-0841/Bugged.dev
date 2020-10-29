@@ -2,7 +2,7 @@
 title: Let's build 2 hooks to manage Next.js Queries
 description: Sometimes we have complete APIs, but maybe at the same time, they're not, but I am happy with that. We can’t expect everything we need to be in one specific tool.
 date: 2020-10-28
-img: useNextQuery.png
+img: marc-sendra-martorell--Vqn2WrfxTQ-unsplash-min.jpg
 ---
 ![Marc Sendra Martorell, unsplash](marc-sendra-martorell--Vqn2WrfxTQ-unsplash-min.jpg)
   
@@ -16,7 +16,7 @@ In React or Next, the same thing applies. They can’t implement all of the hook
 
 ## The problem 🤔
 
-The problem was I wanted the same state in my component should be in the query, that's possible and easy to think, but not that easy to write in every component.
+The problem was I wanted the same state in my component to be in the query, that's possible and easy to think, but not that easy to write in every component.
 
   
 
@@ -44,7 +44,7 @@ We'll use the **router** hook in every component, two **useEffect**s (we can put
 
 ## The solution 😍
 
-I think sometimes we can write a little bit more code that could make our life easier, that's what we're going to do. We'll use more functions and hooks for our new hooks.
+I think sometimes we can write a little bit more code that could make our lives easier, that's what we're going to do. We'll use more functions and hooks for our new hooks.
 I wanted to implement a simple pattern like **[useQuery](https://react-query.tanstack.com/docs/guides/queries)** or **useEffect**, see this:
 ```jsx 
 const {
@@ -60,7 +60,7 @@ useNextQueryEffect(() => {
   return { count: count };
 }, [count]);
 ```
-And the second hook is based on the first one, and it's similar to **useEffect**, it takes some dependencies and when they change, it set the returned object as the new query object. if the last argument is true, it will clear the previous query.
+And the second hook is based on the first one, and it's similar to **useEffect**, it takes some dependencies and when they change, it sets the returned object as the new query object. if the last argument is true, it will clear the previous query.
 
 ## Let's build
 First we need to access the routing system in Next.js, so we shall use **useRouter** hook. 
@@ -117,7 +117,7 @@ useEffect(() => {
 Here when the state changes, the upper useEffect will run again and keep the state and the query up-to-date.
 
 ### Methods
-It's a simple steop, we just create three functions that modify the state and then the query will change.
+It's a simple step, we just create three functions that modify the state and then the query will change.
 ```jsx
 const addQueries = (newQueries) =>
   setState((prevState) => ({ ...prevState, ...newQueries }));
@@ -177,9 +177,12 @@ useEffect(() => {
   addQueries(cb(prevQueries));
  }, deps);
 ``` 
-I put the **previousQueries** before the clear condition, because as you know if we put it after the condition and at the same time the clear option is true, it would return empty object and Hmmm, it's bad.
+I put the **previousQueries** before the clear condition, as you know we can't put it after, because sometimes the clear option will clear the queries and the **prevQueries** will be an empty object.
+And Yesss, that's it.
+## Conclusion
+I always struggled with such problems, and I made a [package](https://github.com/Aslemammad/contextism) from one of them once, So If you wanted to make a npm package from this idea, no problem, I'll be the first one  to use it.
 
-Hooora🎉🥳, we've made our life easier now. I've got a good example for you, please be free to fork it. If you wanted to see how the query works with the url, press the *open Sandbox*.
+So let's party, Hooora🎉🥳, we've made our lives easier now. I've gotten a good example for you, feel free to fork it. If you wanted to see how the query works with the url, press the *open Sandbox*.
 
 <iframe src="https://codesandbox.io/embed/query-article-7h20b?fontsize=14&hidenavigation=1&theme=dark"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
