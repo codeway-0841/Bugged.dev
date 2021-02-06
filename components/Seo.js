@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { getSiteMetaData } from 'utils/helpers';
-
+// good size for images is 1200x630
 export default function SEO({ title, description = '', type = '', image = '' }) {
 	const { asPath } = useRouter();
 	const siteMetadata = getSiteMetaData();
