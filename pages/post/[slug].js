@@ -9,7 +9,7 @@ import Bio from 'components/Bio';
 import Progress from 'components/Progress';
 import dracula from 'react-syntax-highlighter/dist/cjs/styles/prism/dracula';
 import Subscribe from 'components/Subscribe';
-const ReactMarkdown = dynamic(() => import('react-markdown/with-html'), { loading: () => '🐞Please wait...' });
+const ReactMarkdown = dynamic(() => import('react-markdown/with-html'));
 const SyntaxHighlighter = dynamic(() => import('react-syntax-highlighter/dist/cjs/prism-async-light'));
 const CodeBlock = ({ language, value }) => {
 	return (
