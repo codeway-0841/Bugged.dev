@@ -1,8 +1,9 @@
 ---
 title: Let's build 2 hooks to manage Next.js Queries
 description: Sometimes we have complete APIs, but maybe at the same time, they're not, but I am happy with that. We can’t expect everything we need to be in one specific tool.
-date: 2020-10-28
 img: marc-sendra-martorell--Vqn2WrfxTQ-unsplash-min.jpg
+
+date: 2020-10-28
 ---
 ![Marc Sendra Martorell, unsplash](marc-sendra-martorell--Vqn2WrfxTQ-unsplash-min.jpg)
   
