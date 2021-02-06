@@ -3,11 +3,10 @@
 @import "tailwindcss/utilities";
 html,
 body {
-    overflow-x: hidden;
-
+	overflow-x: hidden;
 }
 * {
-    scrollbar-color: dark;
+	scrollbar-color: dark;
 }
 *::selection {
 	@apply bg-bg-red;
@@ -18,9 +17,20 @@ body {
 a {
 	@apply text-red;
 }
-.dark-mode a {
+.dark-mode a,
+.dark-mode li a {
 	@apply text-white;
 	@apply bg-bg-red;
+}
+p code {
+	@apply bg-gray-800;
+	@apply text-white;
+	color: rgb(196, 196, 196) !important;
+	font-weight: 400;
+}
+p code::before,
+p code::after {
+	content: "" !important;
 }
 
 a:hover {
