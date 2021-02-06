@@ -17,9 +17,9 @@ Today I want to show you my approach to read libraries and understand them thoro
 - VS code( or any code editor that you can attach a debugger to it)
 - Debugger
 - VS code jest extension( we can work without) or node debugger🤷🏻‍♂️
-- Your favorite project( I use [jotai](https://github.com/pmndrs/jotai) this time)
+- Your favourite project( I use [jotai](https://github.com/pmndrs/jotai) this time)
 
-> Sometimes we need to set our own node version on 14, because i saw the debugger has some struggles with the 15 version.
+> Sometimes we need to set our own node version on 14 because I saw the debugger has some struggles with the 15 version.
 
 Make sure you have some background of the library docs, then open the library's source code, so let's start our journey and drink the coffee( I don't do actually) because I'm really passionate to get it out of my system. 
 
