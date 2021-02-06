@@ -8,6 +8,7 @@ import { getPostBySlug, getPostsSlugs } from 'utils/posts';
 import Bio from 'components/Bio';
 import Progress from 'components/Progress';
 import dracula from 'react-syntax-highlighter/dist/cjs/styles/prism/dracula';
+import Subscribe from 'components/Subscribe';
 const ReactMarkdown = dynamic(() => import('react-markdown/with-html'), { loading: () => '🐞Please wait...' });
 const SyntaxHighlighter = dynamic(() => import('react-syntax-highlighter/dist/cjs/prism-async-light'));
 const CodeBlock = ({ language, value }) => {
@@ -53,6 +54,8 @@ export default function Post({ post, frontmatter, nextPost, previousPost }) {
 					source={post.content}
 					renderers={{ code: CodeBlock, image: MarkdownImage }}
 				/>
+
+				<Subscribe />
 				<hr className="mt-4" />
 				<footer>
 					<Bio className="mt-8 mb-16" />
