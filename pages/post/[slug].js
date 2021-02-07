@@ -8,9 +8,9 @@ import { getPostBySlug, getPostsSlugs } from 'utils/posts';
 import Bio from 'components/Bio';
 import Progress from 'components/Progress';
 import dracula from 'react-syntax-highlighter/dist/cjs/styles/prism/dracula';
-import Subscribe from 'components/Subscribe';
 const ReactMarkdown = dynamic(() => import('react-markdown/with-html'));
 const SyntaxHighlighter = dynamic(() => import('react-syntax-highlighter/dist/cjs/prism-async-light'));
+const Subscribe = dynamic(() => import('components/Subscribe'));
 const CodeBlock = ({ language, value }) => {
 	return (
 		<SyntaxHighlighter language={language} style={dracula} customStyle={{ fontSize: '1rem' }}>
