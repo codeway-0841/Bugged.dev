@@ -6,7 +6,7 @@ export default function Loading({ slug, title, date, description }) {
 		<article>
 			<header className="mb-2">
 				<h3 className="mb-2">
-					<Link href={'/post/[slug]'} as={`/post/${slug}`}>
+					<Link href={`/post/${slug}`}>
 						<a className="text-3xl font-bold text-red-600 font-display">{title}</a>
 					</Link>
 				</h3>

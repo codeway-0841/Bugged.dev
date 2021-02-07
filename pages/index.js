@@ -1,6 +1,4 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import Link from 'next/link';
-
 import Layout from 'components/Layout';
 import Bio from 'components/Bio';
 import SEO from 'components/Seo';
