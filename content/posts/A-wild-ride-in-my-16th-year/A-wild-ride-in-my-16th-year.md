@@ -39,4 +39,4 @@ The best way of learning is teaching, that's weird, but that's how it is. I star
 ## [Poimandres](https://github.com/pmndrs)
 Contributing to jotai, valtio and eslint-plugin-valtio made and some other libs made me into such a lovely, friendly and active group. We maintain many wondrous things; you can take a look at our Github. Thanks, [Paul](https://github.com/drcmda), for letting me in.
 
-In the end, I'm fortunate for having my family, A supportive and helpful one, and I really wanted to thank them for everything. I have many plans for my 17th. I'll write about them slowly. Lucky too for having such readers hope you liked this post, don't forget to show me your reactions also, really love you all.
+In the end, I'm fortunate for having my family, A supportive and helpful one, and I really wanted to thank them for everything. I have many plans for my 17th. I'll write about them slowly. Lucky too for having such readers hope you liked this post, don't forget to show me your reactions also, really love you all. Alhamdulillah.
