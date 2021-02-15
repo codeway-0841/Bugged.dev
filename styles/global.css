@@ -18,7 +18,12 @@ a {
 	@apply text-red;
 }
 .dark-mode a,
-.dark-mode li a {
+.dark-mode li a,
+.dark-mode h1 a,
+.dark-mode h2 a,
+.dark-mode h3 a,
+.dark-mode h4 a,
+.dark-mode h5 a {
 	@apply text-white;
 	@apply bg-bg-red;
 }
