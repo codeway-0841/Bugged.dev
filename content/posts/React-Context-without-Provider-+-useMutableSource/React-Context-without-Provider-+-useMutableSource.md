@@ -6,7 +6,7 @@ img: nicolas-thomas-3GZi6OpSDcY-unsplash.jpg
 ---
 ![Experiment, Nicolas Thomas, unsplash](nicolas-thomas-3GZi6OpSDcY-unsplash.jpg)
 
-A while ago, I was reading an RFC from react's RFCs called [`useMutableSource`](https://github.com/reactjs/rfcs/blob/master/text/0147-use-mutable-source.md); it was an experimental feature that, in a nutshell, lets you safely read, write and even edit an external source (outside of the react components tree). It's a banger feature, which I'm really chuffed for it, but it's experimental at the same time. You may know that I'm working on an Open-source state-management library called jotai. This library announced it's a new feature, the Provider-less mode. To know what it is, think of React Context, but no need for a `Provider` component, it's not exactly that, but it gives you the idea.
+A while ago, I was reading an RFC from react's RFCs called [`useMutableSource`](https://github.com/reactjs/rfcs/blob/master/text/0147-use-mutable-source.md); it was an experimental feature that, in a nutshell, lets you safely read, write and even edit an external source (outside of the react components tree). It's a banger feature, which I'm really chuffed for it, but it's experimental at the same time. You may know that I'm working on an Open-source state-management library called jotai. This library announced a new feature, the Provider-less mode. To know what it is, think of React Context, but no need for a `Provider` component, it's not exactly that, but it gives you the idea.
 
 ## Why a new one?
 
