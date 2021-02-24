@@ -27,14 +27,17 @@ a {
 	@apply text-white;
 	@apply bg-bg-red;
 }
-p code {
-	@apply bg-gray-800;
+p code,
+li code {
+	@apply bg-bg-red;
 	@apply text-white;
-	color: rgb(196, 196, 196) !important;
-	font-weight: 400;
+	color: rgb(230, 230, 230) !important;
+	font-weight: 200 !important;
 }
 p code::before,
-p code::after {
+p code::after,
+li code::before,
+li code::after {
 	content: "" !important;
 }
 
