@@ -2,6 +2,7 @@ import Image from './Image';
 import { getSiteMetaData } from 'utils/helpers';
 import Profile from 'content/assets/profile.jpg';
 import PreviewProfile from 'content/assets/profile.jpg?lqip';
+import Link from 'next/link';
 export default function Bio({ className }) {
 	const { author, social } = getSiteMetaData();
 	return (
@@ -19,7 +20,10 @@ export default function Bio({ className }) {
 				Written by <b className="font-semibold">{author.name}</b>, {author.summary}
 				<br />
 				Follow him on <a href={`https://twitter.com/${social.twitter}`}>Twitter</a> and{' '}
-				<a href={`https://github.com/${social.github}`}>Github</a>.
+				<a href={`https://github.com/${social.github}`}>Github</a>. Check out his{' '}
+				<Link href={'/newsletter'}>
+					<a>newsletter</a>
+				</Link>.
 			</p>
 		</div>
 	);
