@@ -19,8 +19,9 @@ export default function Bio({ className }) {
 			<p className="md:ml-3 text-base leading-7">
 				Written by <b className="font-semibold">{author.name}</b>, {author.summary}
 				<br />
-				Follow him on <a href={`https://twitter.com/${social.twitter}`}>Twitter</a> and{' '}
-				<a href={`https://github.com/${social.github}`}>Github</a>. Check out his{' '}
+				Follow him on <a href={`https://twitter.com/${social.twitter}`}>Twitter</a>,{' '}
+				<a href={`https://github.com/${social.github}`}>Github</a> and{' '}
+				<a href="https://dev.to/aslemammad">Dev.to</a>. Check out his{' '}
 				<Link href={'/newsletter'}>
 					<a>newsletter</a>
 				</Link>.
