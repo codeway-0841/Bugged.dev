@@ -28,11 +28,19 @@ a {
 	@apply bg-bg-red;
 }
 p code,
-li code {
+li code,
+h1 code,
+h2 code,
+h3 code,
+h4 code {
 	@apply bg-bg-red;
 	@apply text-white;
 	color: rgb(230, 230, 230) !important;
 	font-weight: 200 !important;
+}
+code::before,
+code::after {
+	content: "" !important;
 }
 p code::before,
 p code::after,
