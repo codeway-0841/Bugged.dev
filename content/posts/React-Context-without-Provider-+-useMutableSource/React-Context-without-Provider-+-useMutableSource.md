@@ -59,19 +59,25 @@ const globalStoreSource = createMutableSource(
 Now it's the time to talk about `getSnapshot`; in a nutshell, it's a function that `useMutableSource` returns its returned value whenever the state changes.
 
 ```tsx
+const cache = new Map();
+
 const getSnapshot = (store: typeof globalStore) => {
   const setState = (
     cb: (prevState: typeof store.state) => typeof store.state
   ) => {
-    store.state = cb({ ...store.state }); // later: setState((prevState) => ({...prevState, ...changes}))
+    store.state = cb({ ...store.state });
     store.version++;
     store.listeners.forEach((listener) => listener());
   };
+  if (!cache.has(store.state) || !cache.has(store)) {
+    cache.clear(); // remove all the old references
+    cache.set(store.state, [{ ...store.state }, setState]); // we cache the result to prevent useless re-renders
+    // the key (store.state) is more consistent than the { ...store.state },
+    // because this changes everytime as a new object, and it always going to create a new cache
+    cache.set(store, store); // check the above if statement, if the store changed completely (reference change), we'll make a new result and new state
+  }
 
-  return [{ ...store.state }, setState] as [
-    typeof store.state,
-    typeof setState
-  ];
+  return cache.get(store.state) as [typeof store.state, typeof setState]; // [state, setState]
 };
 // later: const [state, setState] = useMutableSource(...)
 ```
