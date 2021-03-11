@@ -112,3 +112,6 @@ p span.block span {
 	-webkit-filter: blur(0);
 	filter: blur(0);
 }
+.twitter {
+	content:unset;
+}
