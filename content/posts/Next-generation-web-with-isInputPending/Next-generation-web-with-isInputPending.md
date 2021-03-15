@@ -28,7 +28,7 @@ Let's create an example to see how it works and when we're going to use it.
 
 > `isInputPending` is an experimental tool, so I don't recommend using it now, and in the future, it's going to help frameworks/libraries schedulers. So it's for packages more than personal/business uses.
 
-Assume we have a huge to calculate function called `expensiveWork`, And we're going to schedule it without breaking the web page.
+Assume we have a huge to calculate function called `expensiveWork`, And we're going to run it without breaking the web page.
 
 ```jsx
  function expensive() {
